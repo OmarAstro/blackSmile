@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Website Selector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+        background-image: url(landing2.jpg);
+        background-size: 3000px;
+        background-position-x: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        color: white;
+        background-color: rgb(47, 102, 219);
+        transition: 0.3s;
+      }
+      .red {
+        color: rgb(142 199 249);
+        font-size: xx-large;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Website Selector</h1>
+    <p class="red" id="randomWebsite">
+      Press the button to select a random website!
+    </p>
+    <button onclick="selectRandomWebsite()">Select Random Website</button>
+
+    <script>
+      function selectRandomWebsite() {
+        var websites = [
+          "index3.html",
+          "index3.html",
+          "index3.html",
+          "index3.html",
+          "index3.html",
+        ];
+        var randomIndex = Math.floor(Math.random() * websites.length);
+        var selectedWebsite = websites[randomIndex];
+        window.location.href = selectedWebsite;
+      }
+    </script>
+  </body>
+</html>
